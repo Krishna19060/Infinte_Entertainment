@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <title>Infinite Entertainment | Contact</title>
+  <link rel="icon" type="image/png" href="E:\Projrect images\favicon.svg">
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google Fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Latest FontAwesome CDN (Make sure this link works) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000;
+      color: white;
+      margin: 0;
+      padding-top: 70px;
+    }
+
+    /* Navbar */
+    .navbar {
+      margin-bottom: 0 !important;
+      border: none !important;
+    }
+
+    .navbar-inverse {
+      background-color: #000;
+      border: none;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-brand i {
+      color: #d4af37;
+      margin-right: 10px;
+      font-size: 28px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+      color: white !important;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+      color: #f39c12 !important;
+    }
+
+    .navbar-brand:hover {
+      color: #d4af37;
+    }
+
+    .navbar-brand i:hover {
+      color: #fff;
+    }
+
+    /* Form Container */
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+    }
+
+    h4 {
+      font-weight: normal;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 6px;
+      border: none;
+      font-size: 15px;
+      background-color: #f9f9f9;
+      color: #000;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #555;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border: 2px solid #f39c12;
+      background-color: #fff;
+    }
+
+    .phone-section {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    select.country-code {
+      width: 40%;
+      font-size: 15px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      color: #000;
+    }
+
+    input.phone {
+      width: 60%;
+      font-size: 15px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      color: #000;
+    }
+
+    .submit-btn {
+      background-color: #000;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 6px;
+      width: 100%;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .submit-btn:hover {
+      background-color: #d4af37;
+      color: #000;
+    }
+
+    @media (max-width: 500px) {
+      .phone-section {
+        flex-direction: column;
+      }
+
+      select.country-code,
+      input.phone {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav">
+          <span class="icon-bar" style="background-color: white;"></span>
+          <span class="icon-bar" style="background-color: white;"></span>
+          <span class="icon-bar" style="background-color: white;"></span>
+        </button>
+        <a class="navbar-brand" href="connect.html">
+          <i class="fas fa-infinity"></i> Infinite Entertainment
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="our approach.html">Our Approach</a></li>
+          <li><a href="About.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Form -->
+  <div class="form-container">
+    <h1>LET'S CONNECT</h1>
+    <h4>DROP US A NOTE</h4>
+
+    <form id="contactForm" action="http://localhost/contact.php" method="post" >
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" pattern="[A-Za-z\s]{2,50}" title="Only letters and spaces allowed" required />
+
+      <label for="phone">Phone Number:</label>
+      <div class="phone-section">
+        <select name="country_code" id="country_code" class="country-code" required>
+          <option value="+91">IN +91 (India)</option>
+          <option value="+1">US +1 (USA)</option>
+          <option value="+44">GB +44 (UK)</option>
+          <option value="+61">AU +61 (Australia)</option>
+          <option value="+81">JP +81 (Japan)</option>
+          <option value="+49">DE +49 (Germany)</option>
+          <option value="+33">FR +33 (France)</option>
+          <option value="+39">IT +39 (Italy)</option>
+          <option value="+971">AE +971 (UAE)</option>
+          <option value="+86">CN +86 (China)</option>
+          <option value="+7">RU +7 (Russia)</option>
+          <option value="+34">ES +34 (Spain)</option>
+          <option value="+55">BR +55 (Brazil)</option>
+          <option value="+27">ZA +27 (South Africa)</option>
+          <option value="+82">KR +82 (South Korea)</option>
+          <option value="+66">TH +66 (Thailand)</option>
+          <option value="+90">TR +90 (Turkey)</option>
+          <option value="+62">ID +62 (Indonesia)</option>
+          <option value="+20">EG +20 (Egypt)</option>
+          <option value="+98">IR +98 (Iran)</option>
+        </select>
+        <input type="tel" id="phone" name="phone" class="phone" pattern="[0-9]{6,12}" title="Enter a valid number (6–12 digits)" required placeholder="Phone Number" />
+      </div>
+
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="event_type">Type Of Event:</label>
+      <select id="event_type" name="event_type" required>
+        <option value="">Select Type Of Event</option>
+        <option value="Sports Event">Sport Events</option>
+        <option value="Music Event">Music Events</option>
+        <option value="Wedding Event">Wedding Events</option>
+        <option value="Corporate Event">Corporate Event</option>
+        <option value="Exhibitions">Exhibitions</option>
+      </select>
+
+      <label for="service_type">Select a Service:</label>
+      <select id="service_type" name="service_type" required>
+        <option value="">Select Service</option>
+        <option value="Event Planning">Event Planning</option>
+        <option value="Accreditation">Accreditation</option>
+        <option value="Artist Management">Artist Management</option>
+        <option value="Sponsorship Acquisition">Sponsorship Acquisition</option>
+        <option value="League Operations">League Operations</option>
+        <option value="IP Curation">IP Curation</option>
+        <option value="Sportainment">Sportainment</option>
+        <option value="Hospitality">Hospitality</option>
+        <option value="Production">Production</option>
+        <option value="Pyrotechnics & SFX">Pyrotechnics & SFX</option>
+        <option value="Logistics & Accommodation">Logistics & Accommodation</option>
+        <option value="M.I.C.E">M.I.C.E</option>
+        <option value="Wedding Affairs">Wedding Affairs</option>
+        <option value="Virtual Events & Immersive Technology">Virtual Events & Immersive Technology</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required placeholder="Let us know your event details..."></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+ 
+<!-- Toast Alert -->
+<div id="toast-container" class="alert" style="display: none; position: fixed; top: 80px; right: 20px; z-index: 9999; min-width: 250px;"></div>
+
+<script>
+  function showToast(message, isSuccess = true) {
+    const toast = document.getElementById("toast-container");
+    toast.innerText = message;
+    toast.className = "alert " + (isSuccess ? "alert-success" : "alert-danger");
+    toast.style.display = "block";
+
+    setTimeout(() => {
+      toast.style.display = "none";
+    }, 5000);
+  }
+
+  $("#contactForm").on("submit", function (e) {
+    e.preventDefault(); // prevent page reload
+
+    $.ajax({
+      url: "http://localhost/contact.php",
+      type: "POST",
+      data: $(this).serialize(),
+      success: function (response) {
+        try {
+          const res = JSON.parse(response);
+          showToast(res.message, res.success);
+          if (res.success) {
+            $("#contactForm")[0].reset(); // clear the form on success
+          }
+        } catch (e) {
+          showToast("Something went wrong. Please try again.", false);
+        }
+      },
+      error: function () {
+        showToast("Server error. Please try again later.", false);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

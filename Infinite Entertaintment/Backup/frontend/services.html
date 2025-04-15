@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infinite Entertainment | Services</title>
+  <link rel="icon" type="image/png" href="E:\Projrect images\favicon.svg">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 3 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding-top: 70px;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      margin-bottom: 0 !important;
+      border: none !important;
+    }
+
+    .navbar-inverse {
+      background-color: #000;
+      border: none;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand i {
+      color: #d4af37;
+      margin-right: 10px;
+      font-size: 28px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+      color: white !important;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+      color: #f39c12 !important;
+    }
+
+    @media (max-width: 767px) {
+      .navbar-header {
+        float: none;
+      }
+
+      .navbar-toggle {
+        display: block;
+      }
+
+      .navbar-collapse {
+        border-top: 1px solid #eee;
+      }
+
+      .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+      }
+
+      .navbar-nav > li {
+        float: none;
+      }
+
+      .navbar-nav > li > a {
+        padding: 10px 15px;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .service-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .service-container:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.03);
+    }
+
+    .service-title {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin: 10px 0;
+      transition: 0.3s;
+    }
+
+    .service-title:hover {
+      color: #ffeb3b;
+    }
+
+    .imageContainer {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .imageContainer img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+      transition: 0.3s;
+    }
+
+    .imageContainer img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Overlay Styles */
+    .overlay {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      margin: auto;
+      display: block;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+    }
+
+    .overlay .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav">
+        <span class="icon-bar" style="background-color: white;"></span>
+        <span class="icon-bar" style="background-color: white;"></span>
+        <span class="icon-bar" style="background-color: white;"></span>
+      </button>
+      <a class="navbar-brand" href="services.html">
+        <i class="fas fa-infinity"></i> Infinite Entertainment
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="our approach.html">Our Approach</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="connect.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Services -->
+<div class="container text-center">
+  <p style="font-size: 50px"><b>Our Services</b><p>
+
+  <!-- Repeat for each service -->
+  <div class="service-container" onclick="toggleImage('imageAccreditation')">
+    <h2 class="service-title">Accreditation</h2>
+    <div id="imageAccreditation" class="imageContainer">
+      <img src="E:\Projrect images/accredation.jpg" alt="Accreditation Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageArtistManagement')">
+    <h2 class="service-title">Artist Management</h2>
+    <div id="imageArtistManagement" class="imageContainer">
+      <img src="E:\Projrect images/Artist1.jpg" alt="Artist Management Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageSponsorshipAcquisition')">
+    <h2 class="service-title">Sponsorship Acquisition</h2>
+    <div id="imageSponsorshipAcquisition" class="imageContainer">
+      <img src="E:\Projrect images/sponsorship1.jpg" alt="Sponsorship Acquisition Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageLeagueOperations')">
+    <h2 class="service-title">League Operations</h2>
+    <div id="imageLeagueOperations" class="imageContainer">
+      <img src="E:\Projrect images\league Operations.jpg" alt="League Operations Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageIPCurations')">
+    <h2 class="service-title">IP Curation</h2>
+    <div id="imageIPCurations" class="imageContainer">
+      <img src="E:\Projrect images/IP1.jpg" alt="IP Curation Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageSportainment')">
+    <h2 class="service-title">Sportainment</h2>
+    <div id="imageSportainment" class="imageContainer">
+      <img src="E:\Projrect images/sportatainment1.jpg" alt="Sportainment Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageHospitality')">
+    <h2 class="service-title">Hospitality</h2>
+    <div id="imageHospitality" class="imageContainer">
+      <img src="E:\Projrect images/hosp1.jpg" alt="Hospitality Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageProduction')">
+    <h2 class="service-title">Production</h2>
+    <div id="imageProduction" class="imageContainer">
+      <img src="E:\Projrect images/production1.jpg" alt="Production Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imagePyrotechnicsSFX')">
+    <h2 class="service-title">Pyrotechnics & SFX</h2>
+    <div id="imagePyrotechnicsSFX" class="imageContainer">
+      <img src="E:\Projrect images/sfx1.jpg" alt="Pyrotechnics & SFX Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageLogisticsAccommodation')">
+    <h2 class="service-title">Logistics & Accommodation</h2>
+    <div id="imageLogisticsAccommodation" class="imageContainer">
+      <img src="E:\Projrect images/logistics1.jpg" alt="Logistics & Accommodation Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageMICE')">
+    <h2 class="service-title">M.I.C.E</h2>
+    <div id="imageMICE" class="imageContainer">
+      <img src="E:\Projrect images/mice1.jpg" alt="M.I.C.E Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageWeddingAffairs')">
+    <h2 class="service-title">Wedding Affairs</h2>
+    <div id="imageWeddingAffairs" class="imageContainer">
+      <img src="E:\Projrect images/wedding1.jpg" alt="Wedding Affairs Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+  <div class="service-container" onclick="toggleImage('imageVirtualEvents')">
+    <h2 class="service-title">Virtual Events & Immersive Technology</h2>
+    <div id="imageVirtualEvents" class="imageContainer">
+      <img src="E:\Projrect images/virtual1.jpg.jpg" alt="Virtual Events Image" onclick="enlargeImage(this.src)">
+    </div>
+  </div>
+
+
+  <!-- Copy this pattern for all other services -->
+
+</div>
+
+<!-- Overlay for enlarged image -->
+<div id="imageOverlay" class="overlay" onclick="hideOverlay()">
+  <span class="close-btn">&times;</span>
+  <img id="overlayImage" src="" alt="Enlarged Image">
+</div>
+
+<!-- Scripts -->
+<script>
+  function toggleImage(imageId) {
+    var imageContainer = document.getElementById(imageId);
+    imageContainer.style.display = (imageContainer.style.display === "block") ? "none" : "block";
+  }
+
+  function showOverlay(src) {
+    event.stopPropagation();
+    var overlay = document.getElementById('imageOverlay');
+    var overlayImg = document.getElementById('overlayImage');
+    overlayImg.src = src;
+    overlay.style.display = "block";
+  }
+
+  function hideOverlay() {
+    document.getElementById('imageOverlay').style.display = "none";
+  }
+
+  // Close overlay when clicking the close button
+  document.querySelector('.close-btn').addEventListener('click', hideOverlay);
+</script>
+
+</body>
+</html>

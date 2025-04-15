@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infinite Entertainment | Admin Login</title>
+  <link rel="icon" type="image/png" href="E:\Projrect images\favicon.svg">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .login-container {
+      background: #2f2f2f;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+    .navbar-brand {
+      color: #ccc !important;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .navbar-brand:hover {
+      color: #fff !important;
+    }
+    .infinity-symbol {
+      color: #d4af37;
+      font-size: 32px;
+      margin-right: 10px;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .input-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      color: #fff;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #444;
+      color: #fff;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background: #f39c12;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+    .login-btn:hover {
+      background: #e08e0b;
+      color: #fff;
+    }
+    .error-message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="navbar-brand">
+      <i class="fas fa-infinity infinity-symbol"></i> Infinite Entertainment
+    </div>
+    <h2>Admin Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <div class="error-message" id="errorMsg">Wrong credentials. Please try again.</div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (username === 'ks1906' && password === 'infinite') {
+        window.location.href = 'admin.html';
+      } else {
+        document.getElementById('errorMsg').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
